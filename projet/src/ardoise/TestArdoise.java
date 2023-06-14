@@ -57,7 +57,7 @@ public class TestArdoise {
 		desEtoiles.add(branche3);
 		desEtoiles.add(branche4);
 		
-		Forme Etoile = new FormeComposee("etoiles",desEtoiles);
+		Forme Etoile = new FusionForme("etoiles",desEtoiles);
 		
 		
 		PointPlan pma1 = new PointPlan(80,140);
@@ -78,7 +78,7 @@ public class TestArdoise {
 		Maisons.add(ToitMaison);
 		Maisons.add(CorpMaison);
 		
-		Forme Maison = new FormeComposee("Maison",Maisons);
+		Forme Maison = new FusionForme("Maison",Maisons);
 		
 		
 		ardoise.dessinerGraphique();
