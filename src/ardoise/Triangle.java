@@ -42,6 +42,13 @@ public class Triangle extends Forme {
 		
 	}
 	
+	public Triangle(Forme T)  {
+		this.setPoint1(((Triangle)T).getPoint1());
+		this.setPoint2(((Triangle)T).getPoint2());
+		this.setPoint3(((Triangle)T).getPoint3());
+		
+	}
+	
 	public PointPlan getPoint1() {
 		return this.POINT1;
 	}
