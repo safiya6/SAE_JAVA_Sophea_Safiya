@@ -25,8 +25,30 @@ public class Triangle extends Forme {
 	/**
 	 *Constructeur champ a champ
 	 */
-	public Triangle(String nom, PointPlan p1, PointPlan p2, PointPlan p3) {
+	public Triangle(String nom, PointPlan p1, PointPlan p2, PointPlan p3) throws Exception{
 		super(nom);
+
+		if(p1.getAbscisse()<0) {
+			throw new Exception();
+		}
+		if(p1.getOrdonnee()<0) {
+			throw new Exception();
+		}
+		
+		if(p2.getAbscisse()<0) {
+			throw new Exception();
+		}
+		if(p2.getOrdonnee()<0) {
+			throw new Exception();
+		}
+		
+		if(p3.getAbscisse()<0) {
+			throw new Exception();
+		}
+		if(p3.getOrdonnee()<0) {
+			throw new Exception();
+		}
+		
 		this.POINT1=p1;
 		this.POINT2=p2;
 		this.POINT3=p3;
@@ -35,17 +57,10 @@ public class Triangle extends Forme {
 	/**
 	 *Constructeur par copie
 	 */
-	public Triangle(Triangle T) {
-		this.setPoint1(T.getPoint1());
-		this.setPoint2(T.getPoint2());
-		this.setPoint3(T.getPoint3());
-		
-	}
-	
-	public Triangle(Forme T)  {
-		this.setPoint1(((Triangle)T).getPoint1());
-		this.setPoint2(((Triangle)T).getPoint2());
-		this.setPoint3(((Triangle)T).getPoint3());
+	public Triangle(Forme T) {
+		this.setPoint1(((Triangle) T).getPoint1());
+		this.setPoint2(((Triangle) T).getPoint2());
+		this.setPoint3(((Triangle) T).getPoint3());
 		
 	}
 	
@@ -73,6 +88,7 @@ public class Triangle extends Forme {
 		this.POINT3=p;
 	}
 
+	
 	/**
 	 *Un triangle doit-etre capable de se deplacer
 	 *<br>Deplace le triangle de deplacementX et de deplacementY
@@ -103,6 +119,7 @@ public class Triangle extends Forme {
 		return T;
 	}
 
+	
 	/**
 	 * Renvoie le type de la forme triangle qui est T
 	 *
@@ -112,5 +129,14 @@ public class Triangle extends Forme {
 	public String typeForme() {
 		return "T";
 	}
+	
+	
+	public String toString() {
+        return "Je suis " + super.getNomForme() +"\n"+
+                "mon premier point est :" +  getPoint1() +"\n"+
+                "mon second point est :" +  getPoint2() +"\n" +
+                "mon troisieme point est " + getPoint3();
+
+    }
 
 }
