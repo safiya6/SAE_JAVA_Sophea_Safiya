@@ -1,10 +1,12 @@
 package ardoise;
+import java.util.Timer;
+import java.util.TimerTask;
 
 import ardoise.*;
 import java.util.ArrayList;
 
 public class TestArdoise {
-	public static void main(String []args ){
+	public static void main(String []args ) throws Exception{
 		
 		Ardoise ardoise = new Ardoise();
 	
@@ -60,7 +62,6 @@ public class TestArdoise {
 		
 		Forme Etoile = new FusionForme("etoiles",desEtoiles);
 		
-		
 		PointPlan pma1 = new PointPlan(80,140);
 		PointPlan pma2 = new PointPlan(180,198);		
 		Forme CorpMaison = new Quadrilatere("CorpMaison", pma1, pma2);
@@ -78,12 +79,18 @@ public class TestArdoise {
 		Maisons.add(PorteMaison);
 		Maisons.add(ToitMaison);
 		Maisons.add(CorpMaison);
-		
 		Forme Maison = new FusionForme("Maison",Maisons);
-		
-		
-		ardoise.dessinerGraphique();
 	
+		ardoise.dessinerGraphique();
+		
+		Timer tmp = new Timer();
+
+        tmp.schedule(new TimerTask() {
+            public void run() {
+                ardoise.deplacer("C", 10, 20);
+            }
+        }, 1000); 
+		
 		ardoise.ajouterForme(tour);
 		ardoise.ajouterForme(montagne1);
 		ardoise.ajouterForme(montagne2);
@@ -96,5 +103,6 @@ public class TestArdoise {
 		
 		ardoise.test();
 
- }
- }
+	}
+	
+}
