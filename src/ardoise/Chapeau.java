@@ -36,10 +36,10 @@ public class Chapeau extends Forme {
 	/**
 	 *Constructeur par copie
 	 */
-	public Chapeau(Chapeau C) {
-		this.setPoint1(C.getPoint1());
-		this.setPoint2(C.getPoint2());
-		this.setPoint3(C.getPoint3());
+	public Chapeau(Forme C)  {
+		this.setPoint1(((Chapeau )C).getPoint1());
+		this.setPoint2(((Chapeau )C).getPoint2());
+		this.setPoint3(((Chapeau )C).getPoint3());
 		
 	}
 	
