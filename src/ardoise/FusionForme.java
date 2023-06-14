@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class FusionForme extends Forme {
 	private ArrayList<Forme> Formes;
 	
-	public FormeComposee() {
+	public FusionForme() {
 	}
 	
 	
@@ -55,10 +55,4 @@ public class FusionForme extends Forme {
 	public ArrayList<Forme> getForme() {
 		return this.Formes;
 	}
-
-
-
-
-
-
 }
