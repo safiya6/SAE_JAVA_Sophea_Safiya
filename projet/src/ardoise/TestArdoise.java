@@ -51,6 +51,35 @@ public class TestArdoise {
 		PointPlan pb12= new PointPlan(170,52);
 		Forme branche4 = new Chapeau("branche1",pb10,pb11,pb12);
 		
+		ArrayList<Forme> desEtoiles = new ArrayList<Forme>();
+		desEtoiles.add(branche1);
+		desEtoiles.add(branche2);
+		desEtoiles.add(branche3);
+		desEtoiles.add(branche4);
+		
+		Forme Etoile = new FormeComposee("etoiles",desEtoiles);
+		
+		
+		PointPlan pma1 = new PointPlan(80,140);
+		PointPlan pma2 = new PointPlan(180,198);		
+		Forme CorpMaison = new Quadrilatere("CorpMaison", pma1, pma2);
+		
+		PointPlan pma3 = new PointPlan(120,170);
+		PointPlan pma4 = new PointPlan(140,198);	
+		Forme PorteMaison = new Quadrilatere("PorteMaison", pma3, pma4);
+		
+		PointPlan pma5 = new PointPlan(80,140);
+		PointPlan pma6 = new PointPlan(130,100);	
+		PointPlan pma7 = new PointPlan(180,140);	
+		Forme ToitMaison = new Chapeau("PorteMaison", pma5, pma6,pma7);
+		
+		ArrayList<Forme> Maisons = new ArrayList<Forme>();
+		Maisons.add(PorteMaison);
+		Maisons.add(ToitMaison);
+		Maisons.add(CorpMaison);
+		
+		Forme Maison = new FormeComposee("Maison",Maisons);
+		
 		
 		ardoise.dessinerGraphique();
 	
@@ -60,6 +89,8 @@ public class TestArdoise {
 		ardoise.ajouterForme(oiseau2);
 		ardoise.ajouterForme(oiseau3);
 		ardoise.ajouterForme(oiseau2);
+		ardoise.ajouterForme(Etoile);
+		ardoise.ajouterForme(Maison);
 		
 		
 		ardoise.test();
