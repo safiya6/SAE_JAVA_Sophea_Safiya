@@ -2,14 +2,14 @@ package ardoise;
 
 import java.util.ArrayList;
 
-public class FormeComposee extends Forme {
+public class FusionForme extends Forme {
 	private ArrayList<Forme> Formes;
 	
 	public FormeComposee() {
 	}
 	
 	
-	public FormeComposee (String nom ,ArrayList<Forme>  desFormes) {
+	public FusionForme (String nom ,ArrayList<Forme>  desFormes) {
 		super(nom);
 		this.Formes=desFormes ;
 	}
