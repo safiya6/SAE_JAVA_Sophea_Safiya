@@ -1,6 +1,7 @@
 package ardoise;
 
 import ardoise.*;
+import java.util.ArrayList;
 
 public class TestArdoise {
 	public static void main(String []args ){
