@@ -26,8 +26,31 @@ public class Chapeau extends Forme {
 	/**
 	 *Constructeur champ a champ
 	 */
-	public Chapeau(String nom, PointPlan p1, PointPlan p2, PointPlan p3) {
+	public Chapeau(String nom, PointPlan p1, PointPlan p2, PointPlan p3) throws Exception {
 		super(nom);
+		
+		if(p1.getAbscisse()<0) {
+			throw new Exception();
+		}
+		if(p1.getOrdonnee()<0) {
+			throw new Exception();
+		}
+		
+		if(p2.getAbscisse()<0) {
+			throw new Exception();
+		}
+		if(p2.getOrdonnee()<0) {
+			throw new Exception();
+		}
+		
+		if(p3.getAbscisse()<0) {
+			throw new Exception();
+		}
+		if(p3.getOrdonnee()<0) {
+			throw new Exception();
+		}
+		
+		
 		this.POINT1=p1;
 		this.POINT2=p2;
 		this.POINT3=p3;
@@ -36,10 +59,11 @@ public class Chapeau extends Forme {
 	/**
 	 *Constructeur par copie
 	 */
-	public Chapeau(Forme C)  {
-		this.setPoint1(((Chapeau )C).getPoint1());
-		this.setPoint2(((Chapeau )C).getPoint2());
-		this.setPoint3(((Chapeau )C).getPoint3());
+	public Chapeau(Forme C) {
+		this.setNomForme(C.getNomForme());
+		this.setPoint1(((Chapeau) C).getPoint1());
+		this.setPoint2(((Chapeau) C).getPoint2());
+		this.setPoint3(((Chapeau) C).getPoint3());
 		
 	}
 	
@@ -67,6 +91,7 @@ public class Chapeau extends Forme {
 		this.POINT3=p;
 	}
 
+	
 	/**
 	 *Un chapeau doit-etre capable de se deplacer
 	 *<br>Deplace le chapeau de deplacementX et de deplacementY
@@ -75,13 +100,14 @@ public class Chapeau extends Forme {
 	 *@param deplacementY  - (int) : nombre de point(s) de deplacement en ordonnée.
 	 */
 	@Override
-	public void deplacer(int x, int y) {
+	public void deplacer(int x, int y){
 		this.POINT1.deplacer(x,y);
 		this.POINT2.deplacer(x,y);
 		this.POINT3.deplacer(x,y);
 		
 	}
 
+	
 	/**
 	 * Dessine le chapeau en renvoyant la liste des segments qui le compose.
 	 *
@@ -95,6 +121,7 @@ public class Chapeau extends Forme {
 		return C;
 	}
 
+	
 	/**
 	 * Renvoie le type de la forme chapeau qui est C
 	 *
@@ -104,5 +131,15 @@ public class Chapeau extends Forme {
 	public String typeForme() {
 		return "C";
 	}
+	
+	
+	public String toString() {
+        return "Je suis " + super.getNomForme() +"\n"+
+                "mon premier point est :" +  getPoint1() +"\n"+
+                "mon second point est :" +  getPoint2() +"\n" +
+                "mon troisieme point est " + getPoint3();
+
+    }
+	
 
 }
