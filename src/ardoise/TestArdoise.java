@@ -32,7 +32,12 @@ public class TestArdoise {
 		PointPlan po4 = new PointPlan(142,14);
 		PointPlan po5 = new PointPlan(144,17);
 		PointPlan po6 = new PointPlan(146,14);
-		Forme oiseau3 = new Chapeau("oiseau 3", po4, po5, po6);		
+		Forme oiseau3 = new Chapeau("oiseau 3", po4, po5, po6);	
+		
+		PointPlan po7 = new PointPlan(118,13);
+		PointPlan po8 = new PointPlan(123,20);
+		PointPlan po9 = new PointPlan(128,13);
+		Forme oiseau1 = new Chapeau("oiseau 1", po7, po8, po9);
 		
 		PointPlan pb1 = new PointPlan(170,52);
 		PointPlan pb2= new PointPlan(173,45);
@@ -96,12 +101,12 @@ public class TestArdoise {
 		ardoise.ajouterForme(montagne2);
 		ardoise.ajouterForme(oiseau2);
 		ardoise.ajouterForme(oiseau3);
-		ardoise.ajouterForme(oiseau2);
+		ardoise.ajouterForme(oiseau1);
 		ardoise.ajouterForme(Etoile);
 		ardoise.ajouterForme(Maison);
 		
 		
-		ardoise.test();
+		//ardoise.test();
 
 	}
 	
