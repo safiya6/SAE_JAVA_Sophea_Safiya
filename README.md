@@ -44,6 +44,8 @@ Pour installer le projet Ardoise Magique de Farida sur Eclipse, suivez les étap
 
 5. Pour exécuter le projet, recherchez le fichier "testArdoise.java" dans le package du projet, faites un clic droit dessus et sélectionnez "Run As" (Exécuter en tant que) > "Java Application" (Application Java).
 
+6. Afin de pouvoir executer les test JUnit il faudra ajouter JUnit5 dans le build path.
+
 
 ## Contribuer
 Les contributions à l'Ardoise Magique de Farida sont les bienvenues! Si vous souhaitez apporter des améliorations ou corriger des problèmes, veuillez soumettre une demande d'extraction ou ouvrir un problème dans ce référentiel.
