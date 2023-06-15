@@ -110,6 +110,7 @@ public class TestArdoise {
 		ardoise.ajouterForme(Maison);
 		
 		/*1.4 les oiseaux se deplacent de +10 en abscisse et +20 en ordonnee */
+		/*Methode créer par Sophea */
 		Timer timer = new Timer();
 
 		TimerTask task = new TimerTask() {
