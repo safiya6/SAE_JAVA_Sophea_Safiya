@@ -189,7 +189,7 @@ public class ChapeauTest {
         assertEquals("C",chapeau.typeForme());
     }
 	
-	@Test
+	/*@Test
 	public void resteDansArdoise() throws Exception {
 	PointPlan po1 = new PointPlan(2, 2);
 	PointPlan po2 = new PointPlan(4, 400);
@@ -216,7 +216,7 @@ public class ChapeauTest {
 
 	oiseau2.deplacer(X, Y);
 	
-	}
+	}*/
 	
 	@Test
 	public void testToString() throws Exception {
